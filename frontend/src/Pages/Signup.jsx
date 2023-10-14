@@ -28,10 +28,10 @@ export default function Signup() {
     const [username,setUsername] = useState("");
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
-    const avatar="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=626&ext=jpg"
+  
 
     const handleSubmit=()=>{
-        const payload={username,avatar,email,password}
+        const payload={username,email,password}
         dispatch(registerAction(payload)).then((res)=>{
             toast({
                 title:"Registration Successfull!!",
@@ -67,10 +67,7 @@ export default function Signup() {
                             <Input type="text" value={username} onChange={(e)=>setUsername(e.target.value)} />
                         </FormControl>
 
-                        <FormControl id="avatar" isRequired>
-                            <FormLabel>Avatar</FormLabel>
-                            <Input type="text" defaultValue={avatar}/>
-                        </FormControl>
+                       
 
                         <FormControl id="email" isRequired>
                             <FormLabel>Email address</FormLabel>
