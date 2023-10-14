@@ -77,7 +77,7 @@ export default function Profile() {
     useEffect(()=>{
         setSearchParams(params)
         dispatch(getuser(params,authStore.token))
-    },[page,orderBy])
+    },[page])
 
     return (
         <Box>
